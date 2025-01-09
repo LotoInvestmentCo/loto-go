@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gains Mensuels</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Pool de Loterie</h1>
+        <nav>
+            <a href="/">Accueil</a>
+            <a href="/tickets">Billets</a>
+            <a href="/winnings">Gains</a>
+        </nav>
+    </header>
+    <h2>Gains Mensuels</h2>
+    <table>
+        <tr>
+            <th>Mois</th>
+            <th>Total des Gains</th>
+        </tr>
+        <tr>
+            <td>Janvier 2025</td>
+            <td>$0</td>
+        </tr>
+        {% for month, amount in monthly_winnings %}
+        <tr>
+            <td>{{ month }}</td>
+            <td>${{ amount }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+<footer>
+    <p>Tous droits réservés à Loto Investment Co.</p>
+</footer>
+
+</body>
+</html>

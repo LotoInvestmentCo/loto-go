@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'Accueil</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Pool de Loterie</h1>
+        <nav>
+            <a href="/">Accueil</a>
+            <a href="/tickets">Billets</a>
+            <a href="/winnings">Gains</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Contributeurs</h2>
+        <table>
+            <tr>
+                <th>Nom</th>
+                <th>Contribution Totale</th>
+                <th>Pourcentage</th>
+            </tr>
+            {% for name, amount, percentage in contributors %}
+            <tr>
+                <td>{{ name }}</td>
+                <td>${{ amount }}</td>
+                <td>{{ percentage }}%</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </main>
+<footer>
+    <p>Tous droits réservés à Loto Investment Co.</p>
+</footer>
+
+</body>
+</html>
